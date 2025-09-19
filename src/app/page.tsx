@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Services from "@/components/Services";
+import PartnersCarousel from "@/components/PartnersCarousel";
 import Countries from "@/components/Countries";
 import Testimonials from "@/components/Testimonials";
 import CTA from "@/components/CTA";
@@ -17,6 +18,7 @@ export default function Home() {
       <Hero />
       <About />
       <Services />
+      <PartnersCarousel />
       <Countries />
       <Testimonials />
       <CTA />
