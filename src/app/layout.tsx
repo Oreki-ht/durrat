@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Durrat Foreign Employment Agency",
   description: "Connecting Ethiopian talent with global opportunities",
+  icons: {
+    icon: "/durrat.png",
+  },
 };
 
 export default function RootLayout({

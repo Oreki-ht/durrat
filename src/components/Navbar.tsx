@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -15,7 +17,16 @@ const Navbar = () => {
           transition={{ duration: 0.5 }}
           className="flex items-center"
         >
-          <h1 className="text-[#d4b996] font-bold text-xl md:text-2xl">Durrat Agency</h1>
+          <Link href="/">
+            <Image
+              src="/durrat.png"
+              alt="Durrat Agency Logo"
+              width={70}
+              height={10}
+              className="object-contain"
+              priority
+            />
+          </Link>
         </motion.div>
         
         {/* Desktop links */}

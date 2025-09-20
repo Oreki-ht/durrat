@@ -44,7 +44,7 @@ const Contact = () => {
                 </svg>
                 <div>
                   <h4 className="font-medium text-gray-800">Address</h4>
-                  <p className="text-gray-600">Mexico, Addis Ababa, Ethiopia</p>
+                  <p className="text-gray-600">Mexico, Tselre Building 4th floor, Addis Ababa, Ethiopia</p>
                 </div>
               </div>
               
@@ -54,7 +54,7 @@ const Contact = () => {
                 </svg>
                 <div>
                   <h4 className="font-medium text-gray-800">Email</h4>
-                  <p className="text-gray-600">durrat@gmail.com</p>
+                  <p className="text-gray-600">durrat.agency@gmail.com</p>
                 </div>
               </div>
               
@@ -64,7 +64,7 @@ const Contact = () => {
                 </svg>
                 <div>
                   <h4 className="font-medium text-gray-800">Phone</h4>
-                  <p className="text-gray-600">+251 11 123 4567</p>
+                  <p className="text-gray-600">+251 96 655 5551</p>
                 </div>
               </div>
               
