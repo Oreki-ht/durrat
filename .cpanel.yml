@@ -1,9 +1,9 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/username/public_html/
+    - export DEPLOYPATH=/home/durratiz/public_html/
     - /bin/rm -rf $DEPLOYPATH/*
-    - /bin/cp -R * $DEPLOYPATH
-    - cd $DEPLOYPATH
-    - npm install
-    - npm run build
+    - /usr/local/bin/npm install
+    - /usr/local/bin/npm run build
+    - /usr/local/bin/npm run export
+    - /bin/cp -R out/* $DEPLOYPATH
