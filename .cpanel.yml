@@ -1,10 +1,9 @@
 ---
 deployment:
   tasks:
-    - |
+   - |
       source /home/durratiz/nodevenv/repositories/durrat/18/bin/activate
-      npm install --scripts-prepend-node-path
-      npm run build
+      npm install --production
     - |
       source /home/durratiz/nodevenv/repositories/durrat/18/bin/activate
       pm2 restart server.js || pm2 start server.js --name "durrat"
