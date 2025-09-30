@@ -3,7 +3,8 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/durratiz/public_html/
     - /bin/rm -rf $DEPLOYPATH/*
-    - /usr/local/bin/npm install
-    - /usr/local/bin/npm run build
-    - /usr/local/bin/npm run export
-    - /bin/cp -R out/* $DEPLOYPATH
+    - cd /home/durratiz/repositories/durrat  
+    - npm install
+    - npm run build
+    - /bin/cp -R .next $DEPLOYPATH
+    - /bin/cp -R public/* $DEPLOYPATH/public
