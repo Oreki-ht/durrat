@@ -6,4 +6,4 @@ deployment:
       npm install --production
    - |
       source /home/durratiz/nodevenv/repositories/durrat/18/bin/activate
-      pm2 restart server.js || pm2 start server.js --name "durrat"
+      npx pm2 restart server.js || npx pm2 start server.js --name "durrat"
