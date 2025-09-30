@@ -3,7 +3,6 @@ deployment:
   tasks:
     - |
       source /home/durratiz/nodevenv/repositories/durrat/18/bin/activate
-      export NODE_OPTIONS="--max-old-space-size=2048"
       npm install --scripts-prepend-node-path
       npm run build
     - |
