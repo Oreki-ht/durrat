@@ -2,6 +2,9 @@
 deployment:
   tasks:
     - |
-      /opt/cpanel/ea-nodejs18/bin/npm install --scripts-prepend-node-path
-      /opt/cpanel/ea-nodejs18/bin/npm run build
-    - /opt/cpanel/ea-nodejs18/bin/pm2 restart server.js || /opt/cpanel/ea-nodejs18/bin/pm2 start server.js --name "durrat"
+      source /home/durratiz/nodevenv/durrat/18/bin/activate
+      npm install --scripts-prepend-node-path
+      npm run build
+    - |
+      source /home/durratiz/nodevenv/durrat/18/bin/activate
+      pm2 restart server.js || pm2 start server.js --name "durrat"
