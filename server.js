@@ -9,15 +9,16 @@ const app = next({ dev });
 const handle = app.getRequestHandler();
 
 app.prepare().then(() => {
-  // Create a file to store the port number
-  if (!dev) {
-    try {
-      const portFilePath = path.join(__dirname, 'public', 'port.txt');
-      fs.writeFileSync(portFilePath, port.toString());
-      console.log(`Port number ${port} written to ${portFilePath}`);
-    } catch (err) {
-      console.error('Error writing port file:', err);
-    }
+  // Force-write the port file to the application root directory
+  try {
+    const portFilePath = path.join(__dirname, 'port.txt');
+    fs.writeFileSync(portFilePath, port.toString());
+    console.log(`Port number ${port} written to ${portFilePath}`);
+  } catch (err) {
+    // If writing the port fails, write the error to a log file we can see
+    const errorFilePath = path.join(__dirname, 'error.log');
+    fs.writeFileSync(errorFilePath, err.toString());
+    console.error('Error writing port file:', err);
   }
 
   createServer((req, res) => {
