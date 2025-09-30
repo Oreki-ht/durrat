@@ -1,10 +1,8 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/durratiz/public_html/
-    - /bin/rm -rf $DEPLOYPATH/*
-    - cd /home/durratiz/repositories/durrat
-    - npm install
-    - npm run build
-    - npm run export
-    - /bin/cp -R out/* $DEPLOYPATH
+    - export DEPLOYPATH=/home/durratiz/repositories/durrat
+    - /bin/cp -R * $DEPLOYPATH/
+    - cd $DEPLOYPATH && npm install --production
+    - cd $DEPLOYPATH && npm run build
+    - /opt/cpanel/ea-nodejs18/bin/pm2 restart server.js || true
