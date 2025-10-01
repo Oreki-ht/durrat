@@ -4,8 +4,7 @@ deployment:
    - |
       source /home/durratiz/nodevenv/repositories/durrat/18/bin/activate
       npm install --production
-      npm run export
-   - |
+      npm run build
       echo "Copying static files to public_html..."
       \cp -rf /home/durratiz/repositories/durrat/out/* /home/durratiz/public_html/
       echo "Static site deployed successfully!"
