@@ -4,4 +4,5 @@ deployment:
    - |
       echo "Copying pre-built static files to public_html..."
       \cp -rf /home/durratiz/repositories/durrat/out/* /home/durratiz/public_html/
+      \cp -f /home/durratiz/repositories/durrat/.htaccess /home/durratiz/public_html/
       echo "Static site deployed successfully!"
