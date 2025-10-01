@@ -4,20 +4,24 @@ const fs = require('fs');
 const path = require('path');
 
 const port = process.env.PORT || 3000;
-const dev = process.env.NODE_ENV !== 'production';
-const app = next({ dev });
+// Force production mode to use .next
+const app = next({ dev: false });
 const handle = app.getRequestHandler();
 
 app.prepare().then(() => {
-  // Force-write the port file to the application root directory
+  // Same port writing code...
   try {
     const portFilePath = path.join(__dirname, 'port.txt');
     fs.writeFileSync(portFilePath, port.toString());
     console.log(`Port number ${port} written to ${portFilePath}`);
   } catch (err) {
-    // If writing the port fails, write the error to a log file we can see
     const errorFilePath = path.join(__dirname, 'error.log');
-    fs.writeFileSync(errorFilePath, err.toString());
+    try {
+      fs.writeFileSync(errorFilePath, err.toString());
+    } catch (e) {
+      // Double failure, just log to console
+      console.error('Error writing error log:', e);
+    }
     console.error('Error writing port file:', err);
   }
 
