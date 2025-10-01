@@ -7,4 +7,4 @@ deployment:
    - |
       source /home/durratiz/nodevenv/repositories/durrat/18/bin/activate
       npx pm2 delete durrat || true
-      npx pm2 start server.js --name "durrat" --max-memory-restart 150M --restart-delay=3000 --exp-backoff-restart-delay=100 --min-uptime 10000
+      npx pm2 start ecosystem.config.js
