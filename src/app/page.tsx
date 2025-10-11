@@ -6,6 +6,7 @@ import About from "@/components/About";
 import Services from "@/components/Services";
 import PartnersCarousel from "@/components/PartnersCarousel";
 import Countries from "@/components/Countries";
+import Team from "@/components/Team";
 import Testimonials from "@/components/Testimonials";
 import CTA from "@/components/CTA";
 import Contact from "@/components/Contact";
@@ -20,6 +21,7 @@ export default function Home() {
       <Services />
       <PartnersCarousel />
       <Countries />
+      <Team />
       <Testimonials />
       <CTA />
       <Contact />
